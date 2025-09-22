@@ -1,0 +1,63 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "custom_name": {
+      "type": "string",
+      "description": "User-defined name for the conversation"
+    },
+    "folder_id": {
+      "type": "string",
+      "description": "ID of the folder this conversation belongs to"
+    },
+    "original_text": {
+      "type": "string",
+      "description": "Original transcribed text from voice input"
+    },
+    "corrected_text": {
+      "type": "string",
+      "description": "Grammar corrected version of the text"
+    },
+    "improved_text": {
+      "type": "string",
+      "description": "Enhanced version with better vocabulary and structure"
+    },
+    "tone_suggestions": {
+      "type": "object",
+      "description": "Different tone variations",
+      "properties": {
+        "formal": {
+          "type": "string"
+        },
+        "friendly": {
+          "type": "string"
+        },
+        "professional": {
+          "type": "string"
+        },
+        "casual": {
+          "type": "string"
+        },
+        "persuasive": {
+          "type": "string"
+        }
+      }
+    },
+    "confidence_score": {
+      "type": "number",
+      "description": "Speech recognition confidence level"
+    },
+    "duration": {
+      "type": "number",
+      "description": "Recording duration in seconds"
+    },
+    "language": {
+      "type": "string",
+      "default": "en-US",
+      "description": "Language used for transcription"
+    }
+  },
+  "required": [
+    "original_text"
+  ]
+}
